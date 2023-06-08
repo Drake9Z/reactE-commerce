@@ -44,6 +44,8 @@ const Home = () => {
                   <ListGroup.Item
                     key={category.id}
                     onClick={() => dispatch(filterCategoryThunk(category.id))}
+                    className='m-2'
+                    style={{cursor: "pointer"}}
                   >
                     {category.name}
                   </ListGroup.Item>
@@ -76,7 +78,7 @@ const Home = () => {
             {productsList.map((product) => (
               <Col className="mb-3" key={product.id}>
                 <Card className="w-100">
-                  <Card.Img variant="top" src={product.images[0].url} fluid />
+                  <Card.Img variant="top" src={product.images[0].url}/>
                   <Card.Body>
                     <Card.Title className="card-title" style={{ fontSize: 17 }}>
                       {product.title}

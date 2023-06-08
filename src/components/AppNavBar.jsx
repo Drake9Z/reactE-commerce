@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import SideCart from "./sideCart";
+import SideCart from "./SideCart";
 import { useNavigate } from "react-router-dom";
 import '../App.css'
 
