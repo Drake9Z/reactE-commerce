@@ -1,0 +1,24 @@
+.navbar-pages{
+    margin-left: auto;
+}
+
+.navbar-icon{
+    width: 100px;
+    border-left: 1px solid rgba(0,0,0,.1);
+    text-align: center;
+}
+
+.navbar-icon i{
+    color: rgba(0, 0, 0, 0.397);
+    font-size: 25px;
+    margin: 0 auto;
+}
+
+.navbar-icon i:hover{
+    color: #4361ee;
+}
+
+.card-title{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
