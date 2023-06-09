@@ -77,32 +77,42 @@ const Home = () => {
           <Row xs={1} md={2} lg={3}>
             {productsList.map((product) => (
               <Col className="mb-3" key={product.id}>
-                <Card className="w-100">
-                  <Card.Img variant="top" src={product.images[0].url}/>
+                <Card 
+                style={{height: '100%', paddingTop: 2}}
+                className="w-100" 
+                >
+                  <Card.Img variant="top" 
+                  src={product.images[0].url}
+                  style={{height: 180, objectFit: "contain"}}
+                  />
                   <Card.Body>
                     <Card.Title className="card-title" style={{ fontSize: 17 }}>
                       {product.title}
                     </Card.Title>
-                    <p
-                      style={{
-                        fontSize: 12,
-                        fontFamily: "Arial",
-                        color: "rgba(0,0,0,.5)",
-                        margin: 0,
-                      }}
-                    >
-                      Price
-                    </p>
-                    <Card.Text className="card-title" style={{ fontSize: 15 }}>
-                      $ {product.price}
-                    </Card.Text>
-                    <Button
-                      as={Link}
-                      to={`/products/${product.id}`}
-                      variant="primary"
-                    >
-                      more info
-                    </Button>
+                    <div className="price-button">
+                      <div className="price">
+                        <p
+                        style={{
+                          fontSize: 12,
+                          fontFamily: "Arial",
+                          color: "rgba(0,0,0,.5)",
+                          margin: 0,
+                        }}
+                      >
+                        Price
+                      </p>
+                      <Card.Text className="card-title" style={{ fontSize: 15 }}>
+                        $ {product.price}
+                      </Card.Text>
+                      </div>
+                      <Button
+                        as={Link}
+                        to={`/products/${product.id}`}
+                        variant="primary"
+                      >
+                        more info
+                      </Button>
+                    </div>
                   </Card.Body>
                 </Card>
               </Col>

@@ -2,6 +2,7 @@ import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
+import Card from 'react-bootstrap/Card';
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import {useForm} from "react-hook-form"
@@ -37,13 +38,13 @@ const Login = () => {
     }
 
   return (
-    <div>
+    <Card style={{ width: '18rem'}} className="mx-auto my-auto">
       <Form onSubmit={ handleSubmit(submit)}  className="p-3" style={{border: "1px solid black"}}>
         <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-          <Form.Label column sm={2}>
+          <Col sm={10}>
+          <Form.Label >
             Email
           </Form.Label>
-          <Col sm={10}>
             <Form.Control 
             type="email" 
             placeholder="Email"
@@ -57,10 +58,10 @@ const Login = () => {
           className="mb-3"
           controlId="formHorizontalPassword"
         >
-          <Form.Label column sm={2}>
+          <Col sm={10}>
+          <Form.Label>
             Password
           </Form.Label>
-          <Col sm={10}>
             <Form.Control 
             type="password" 
             placeholder="Password" 
@@ -75,7 +76,7 @@ const Login = () => {
           </Col>
         </Form.Group>
       </Form>
-    </div>
+    </Card>
   );
 };
 
